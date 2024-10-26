@@ -1,0 +1,90 @@
+/* Products.css */
+.Products {
+    padding: 50px 20px; /* Add padding to the top and bottom */
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center; /* Center-align the text */
+}
+
+.Products h2 {
+    font-size: 2.5rem; /* Size of the heading */
+    margin-bottom: 30px; /* Space below the heading */
+    color: green; /* Heading color */
+}
+
+.product-list {
+    display: flex; /* Use flexbox for the layout */
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    justify-content: center; /* Center the products */
+    gap: 20px; /* Space between the product cards */
+}
+
+.product-card {
+    background-color: white; /* White background for the cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Prevent overflow of images */
+    transition: transform 0.3s; /* Smooth scaling effect */
+    width: 250px; /* Set a fixed width for product cards */
+    text-align: center; /* Center-align text inside cards */
+}
+
+.product-card img {
+    width: 100%; /* Full width image */
+    height: 200px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.product-card h3 {
+    font-size: 1.5rem; /* Font size for product names */
+    margin: 15px 0 10px; /* Space around product name */
+    color: #21c063; /* Product name color */
+}
+
+.product-card p {
+    font-size: 1rem; /* Font size for description */
+    margin: 0 15px 15px; /* Space around description */
+    color: #666; /* Description color */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-list {
+        justify-content: center; /* Center products */
+    }
+
+    .product-card {
+        width: 200px; /* Adjust width for medium screens */
+    }
+
+    .Products h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        flex-direction: column; /* Stack product cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .product-card {
+        width: 100%; /* Full width for product cards */
+        max-width: 300px; /* Limit max width for small screens */
+    }
+
+    .Products h2 {
+        font-size: 1.75rem; /* Smaller heading size for mobile */
+    }
+
+    .product-card h3 {
+        font-size: 1.25rem; /* Smaller font size for product names */
+    }
+
+    .product-card p {
+        font-size: 0.875rem; /* Smaller font size for descriptions */
+    }
+}

@@ -1,0 +1,125 @@
+.Hero {
+  width: 100%;
+  height: 80vh; /* Full viewport height */
+  background-image: url('/white-chickens.jpg'); /* Ensure to use the correct path */
+  background-size: cover; /* Image covers the whole section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  filter: opacity(0.5); /* Use decimal for opacity */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  position: relative;
+  color: white; /* Set default text color */
+  text-align: center; /* Center text alignment */
+}
+
+.Hero h1, 
+.Hero p {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.Hero h1 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 3rem; /* Heading font size */
+  color: white; /* Set heading color */
+  font-weight: 600;
+}
+
+.Hero p {
+  color: green; /* Paragraph color */
+  font-size: 1.7rem; /* Paragraph font size */
+  margin-top: 1rem; /* Space between heading and paragraph */
+  font-weight: 900; /* Bold text */
+}
+
+.hero-btn {
+  position: absolute;
+  bottom: 30px; /* Position at the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.hero-btn button {
+  padding: 10px 20px; /* Button padding */
+  background-color: green; /* Transparent background */
+  font-size: 1rem; /* Button font size */
+  color: white; /* Button text color */
+  font-weight: 600; /* Button font weight */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.hero-btn button:hover {
+  background-color: #21c063; /* Change background on hover */
+}
+
+.arrow {
+  width: 12px; /* Arrow icon size */
+  margin-left: 5px; /* Space to the left of the arrow */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .Hero h1 {
+      font-size: 2.5rem; /* Smaller heading for large screens */
+  }
+
+  .Hero p {
+      font-size: 1.25rem; /* Smaller paragraph font size */
+  }
+}
+
+@media (max-width: 992px) {
+  .Hero {
+      height: 80vh; /* Slightly smaller height for medium screens */
+  }
+
+  .Hero h1 {
+      font-size: 2rem; /* Further reduce heading size */
+  }
+
+  .Hero p {
+      font-size: 1rem; /* Further reduce paragraph font size */
+  }
+
+  .hero-btn button {
+      font-size: 0.9rem; /* Smaller button font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .Hero {
+      height: 70vh; /* Smaller height for tablets */
+  }
+
+  .Hero h1 {
+      font-size: 1.75rem; /* Further reduce heading size */
+  }
+
+  .Hero p {
+      font-size: 0.9rem; /* Further reduce paragraph font size */
+  }
+
+  .hero-btn {
+      bottom: 20px; /* Adjust button position */
+  }
+}
+
+@media (max-width: 480px) {
+  .Hero {
+      height: 60vh; /* Smaller height for mobile screens */
+  }
+
+  .Hero h1 {
+      font-size: 1.5rem; /* Reduce heading size for mobile */
+  }
+
+  .Hero p {
+      font-size: 0.8rem; /* Reduce paragraph font size for mobile */
+  }
+}

@@ -1,0 +1,56 @@
+/* Footer.css */
+.footer {
+    background-color: #5ef09a; /* Background color */
+    color: white; /* Text color */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+}
+
+.footer-content {
+    max-width: 1200px; /* Maximum width for content */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px; /* Horizontal padding for smaller screens */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Font size for copyright text */
+}
+
+/* Social links styles */
+.social-links {
+    margin-top: 10px; /* Space above social links */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center social links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.social-links a {
+    margin: 0 15px; /* Space between links */
+    color: #FBF6EE; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for social links */
+.social-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #FFD700; /* Change color on hover */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .footer p {
+        font-size: 0.9rem; /* Reduce font size on mobile */
+    }
+
+    .social-links a {
+        margin: 0 10px; /* Reduced margin on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 0.8rem; /* Further reduce font size for very small screens */
+    }
+}

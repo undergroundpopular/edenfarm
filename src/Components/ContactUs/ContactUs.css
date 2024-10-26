@@ -1,0 +1,104 @@
+/* Contact.css */
+
+.ContactUs {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.ContactInfo {
+    flex: 1;
+    margin-right: 20px;
+    background-color: #fff; /* White background for contact info */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.ContactInfo h2 {
+    font-size: 2.5rem;
+    color: green; /* Title color */
+    margin-bottom: 20px;
+}
+
+.ContactInfo p {
+    font-size: 1.1rem;
+    color: #555; /* Darker text color */
+    margin: 10px 0;
+}
+
+.SocialLinks {
+    margin-top: 10px;
+}
+
+.SocialLinks a {
+    margin-right: 15px; /* Space between social icons */
+}
+
+.ContactForm {
+    flex: 1;
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.ContactForm form {
+    display: flex;
+    flex-direction: column; /* Stack form elements */
+}
+
+.ContactForm label {
+    margin: 10px 0 5px; /* Space above and below labels */
+    font-weight: bold; /* Bold labels */
+}
+
+.ContactForm input,
+.ContactForm textarea {
+    padding: 10px; /* Inner padding */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+}
+
+.ContactForm textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for the textarea */
+}
+
+.ContactForm button {
+    background-color: green; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1.1rem; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.ContactForm button:hover {
+    background-color: darkgreen; /* Darker button color on hover */
+}
+
+.error-message {
+    color: red; /* Error message color */
+    margin-bottom: 15px; /* Space below error message */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .ContactUs {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    .ContactInfo,
+    .ContactForm {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Space below each section */
+        width: 100%; /* Full width for both sections */
+    }
+}

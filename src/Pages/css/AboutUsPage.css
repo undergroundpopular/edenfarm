@@ -1,0 +1,74 @@
+/* About Us Page CSS */
+.about-us-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background-color: white; /* Light background for contrast */
+}
+
+.about-content-page {
+    flex: 1; /* Allow the content to grow */
+    max-width: 50%; /* Maximum width for larger screens */
+}
+
+.about-content-page h2 {
+    font-size: 2.5rem; /* Heading size */
+    color: #2e7d32; /* Dark green color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.about-content-page p {
+    font-size: 1.2rem; /* Text size */
+    color: #555; /* Darker text color */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+.about-image-page {
+    flex: 1; /* Allow the image container to grow */
+    max-width: 45%; /* Maximum width for larger screens */
+}
+
+.about-image-page img {
+    width: 100%; /* Full width of the container */
+    height: 400px; /* Height for a better visual */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .about-us-page {
+        flex-direction: column-reverse; /* Stack elements */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .about-content-page,
+    .about-image-page {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .about-image-page {
+        margin-bottom: 20px; /* Space below image */
+    }
+
+    .about-content-page h2 {
+        font-size: 2rem; /* Reduced font size on mobile */
+    }
+
+    .about-content-page p {
+        font-size: 1rem; /* Reduced font size on mobile */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .about-content-page h2 {
+        font-size: 1.8rem; /* Further reduce heading size */
+    }
+
+    .about-content-page p {
+        font-size: 0.9rem; /* Further reduce paragraph size */
+    }
+}

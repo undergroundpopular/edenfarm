@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Playfair Display', 'roboto', sans-serif;
+}
+
+body{
+    background: white;
+    font-family:  'Playfair Display', 'roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    line-height: 1;
+    cursor: pointer;
+    color: inherit;
+}
+
+/*.container{
+    padding-left: 5%;
+    padding-right: 5%;
+}*/
+.btn{
+    background: #353533;
+    color: #FBF6EE;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn img{
+     width: 20px;
+     margin-left: 10px;
+}
+
+
+
+/* ------- media query -------- */
+
+@media (max-width: 740px) {
+    .btn{
+        padding: 8px 8px;
+    }
+}

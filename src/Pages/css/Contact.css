@@ -1,0 +1,83 @@
+/* ContactUs.css */
+.contact-us-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: white; /* Light background */
+}
+
+.contact-info-section,
+.contact-form-section,
+.map-section {
+    flex: 1;
+    margin-right: 20px;
+    background-color: beige;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px; /* Minimum width for smaller screens */
+}
+
+.contact-info-section h2,
+.contact-form-section h3,
+.map-section h3 {
+    color: green; /* Title color */
+}
+
+.contact-info-section p,
+.contact-form-section label {
+    font-size: 1.1rem; /* Text size */
+    color: #555; /* Darker text color */
+}
+
+.social-media-links {
+    margin-top: 10px;
+}
+
+.social-media-links a {
+    margin-right: 15px; /* Space between social icons */
+}
+
+.contact-form-section form {
+    display: flex;
+    flex-direction: column; /* Stack form elements */
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    padding: 10px; /* Inner padding */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+}
+
+.contact-form-section button {
+    background-color: green; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1.1rem; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.contact-form-section button:hover {
+    background-color: darkgreen; /* Darker button color on hover */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .contact-us-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    .contact-info-section,
+    .contact-form-section,
+    .map-section {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Space below each section */
+        width: 100%; /* Full width for all sections */
+    }
+}

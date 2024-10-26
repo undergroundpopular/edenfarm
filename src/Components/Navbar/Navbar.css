@@ -1,0 +1,139 @@
+/* Default (desktop/larger screen) styles */
+.navbar {
+  position: fixed; /* Fixes the navbar at the top of the screen */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensures the navbar spans the entire width of the viewport */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Ensures the navbar appears above other content */
+}
+
+.navbar.scrolled {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  color: green;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-menu li:hover {
+  color: green;
+}
+
+.nav-menu hr {
+  background-color: #fff700;
+  width: 100%;
+}
+
+.nav-contact-us button {
+  background-color: green;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+.nav-contact-us button:hover {
+  background-color: #21c063;
+}
+
+.menu-icon {
+  display: none; /* Hide by default on desktop */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .menu-icon {
+    margin-top: 0%;
+    display: block; /* Show the hamburger icon on mobile */
+    margin-left: auto; /* Align hamburger to the right */
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu by default */
+    flex-direction: column; /* Stack the links vertically */
+    width: 100%; /* Full width for the menu */
+    background-color: white; /* Background for the menu */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu hr {
+    display: none;
+  }
+
+  .nav-menu.show-mobile-menu {
+    display: flex; /* Show the menu when toggled */
+  }
+
+  .nav-menu li {
+    margin: 10px 0; /* Add vertical spacing between menu items */
+  }
+
+  /* Center the Contact Us button on smaller screens */
+  .center-contact-button {
+    display: flex;
+    justify-content: center; /* Center the button */
+    width: 100%; /* Make sure it spans full width */
+    margin-top: 20px; /* Add margin to separate it from the links */
+  }
+
+  .center-contact-button button {
+    background-color: green;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    width: 100%; /* Make the button full-width on mobile */
+  }
+
+  /* Hide Contact Us button in navbar for mobile screens */
+  .nav-contact-us {
+    display: none; /* Hide on smaller screens */
+  }
+
+  .navbar.scrolled .menu-icon {
+    filter: brightness(0.8); /* Optional styling for scrolled state */
+  }
+}
+
+/* Offset the main content to avoid being covered by the fixed navbar */
+.main-content {
+  padding-top: 80px; /* Adjust this based on the navbar height */
+}

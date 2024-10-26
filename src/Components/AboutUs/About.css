@@ -1,0 +1,87 @@
+/* About.css */
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%; /* Padding for the section */
+    background-color: beige; /* Background color for the section */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-content {
+    flex: 1;
+    max-width: 50%; /* Maximum width for larger screens */
+    margin-right: 20px; /* Space between content and image */
+}
+
+.about-content h2 {
+    font-size: 2.5rem; /* Font size for heading */
+    color: #4a8f1c; /* Darker green for better contrast */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.about-content p {
+    font-size: 1.2rem; /* Font size for paragraph */
+    color: #666; /* Text color */
+    line-height: 1.6; /* Line height for readability */
+}
+
+.about-image {
+    flex: 1;
+    max-width: 45%; /* Maximum width for the image section */
+}
+
+.about-image img {
+    width: 100%; /* Full width image */
+    height: 300px; /* Fixed height */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Cover image without distortion */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column-reverse; /* Stack content on small screens */
+        text-align: center; /* Center text on small screens */
+        padding: 30px 5%; /* Adjust padding for mobile */
+    }
+
+    .about-content,
+    .about-image {
+        max-width: 100%; /* Full width on small screens */
+        margin-right: 0; /* Remove margin */
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Space below the image */
+    }
+
+    .about-content h2 {
+        font-size: 2rem; /* Reduce font size on mobile */
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Reduce font size on mobile */
+    }
+}
+
+/* Additional Media Query for Very Small Devices */
+@media (max-width: 480px) {
+    .about-content h2 {
+        font-size: 1.75rem; /* Further reduce heading size */
+    }
+
+    .about-content p {
+        font-size: 0.9rem; /* Further reduce paragraph size */
+    }
+
+    .about-us {
+        padding: 20px 2%; /* Less padding for very small screens */
+    }
+}
